@@ -8,7 +8,7 @@ ar[1] = 0; // выходное значение
 function DigitSum(ar) {
 	if (ar[0] != 0) {
 		ar[1] = ar[1] + ar[0] % 10;
-		ar[0] = Math.floor(ar[0] / 10);
+		ar[0] = ~~(ar[0] / 10);
 		ar = DigitSum(ar);
 	}
 	return ar;
