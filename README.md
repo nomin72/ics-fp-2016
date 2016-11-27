@@ -1,3 +1,3 @@
 # ics-fp-2016
 Functional programming learning in ICS 2016.
-Valeria Zubova 13544/3
+name: Maxim Smirnov 13544/2
