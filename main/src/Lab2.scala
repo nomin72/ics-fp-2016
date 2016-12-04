@@ -1,4 +1,4 @@
-object PatternMatching {
+object Lab2 {
 
   def flatMap[A, B](ls: List[A])(f: A => List[B]): List[B] = {
     @annotation.tailrec

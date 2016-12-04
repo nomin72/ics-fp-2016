@@ -1,4 +1,5 @@
-object main {
+
+object Lab1 {
    def main(argv : Array[String]) {
     def pascal(row:Int, columnt:Int): Int = {
       if (columnt == 0 || columnt==row) 1
