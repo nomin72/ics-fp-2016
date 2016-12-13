@@ -1,18 +1,9 @@
 object HelloWorld {
     
    def isPowerOfTwo(n:Int):Boolean = {
-       var div:Int = n/2;
-       var mod:Int = n%2;
        
-       if (div == 0) {
-            return (mod == 1);
-       } else {
-           if(mod == 0) {
-               return isPowerOfTwo(div);
-           } else {
-               return false;
-           }
-       }
+       return if (n/2 == 0) n%2 == 1 else if (n%2 == 0) isPowerOfTwo(n/2) else false
+       
    }
    
    def main(args: Array[String]) {
