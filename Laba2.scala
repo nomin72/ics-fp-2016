@@ -6,17 +6,8 @@ import scala.collection.immutable.List
   */
 
 object Laba2 {
-  def flatMap(x: List[List[Double]], f: Double => Double): List[Double] = {
-    var list = List[Double]()
-    for(a <- x) {
-      for(s <- a) {
-        list ::= f(s)
-      }
-    }
-    list = list.reverse
-    list
+  def flatMap(x: List[List[Double]], f: Double => Double): List[Double] = for (a <- x; s <- a) yield f(s)
   }
-}
 
 object Test extends App {
   var num = List(List(1.0,2.0), List(3.0,4.0))
