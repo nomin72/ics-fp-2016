@@ -1,0 +1,31 @@
+Лаб 2: 13544/1   nomin
+/**
+ * length using foldRight.
+ */
+def length[A](as: List[A]): Int = {
+  foldRight(as, 0)((_, a) => a + 1)
+}
+
+def foldRight[A,B](as: List[A], z: B)(f: (A, B) => B): B =
+  as match {
+    case Nil => z
+    case Cons(x, xs) => f(x, foldRight(xs, z)(f))
+  }
+
+// Run
+object Solution extends App {
+  import List._
+
+  println("length List(1,2,3): " + length(List(1,2,3)))
+  println("length List(1): " + length(List(1)))
+  println("length List(): " + length(List()))
+  println("length Nil: " + length(Nil))
+}
+
+// Output
+/**
+ * length List(1,2,3): 3
+ * length List(1): 1
+ * length List(): 0
+ * length Nil: 0
+ */
